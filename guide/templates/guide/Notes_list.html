@@ -1,4 +1,15 @@
 <html>
-    <p>Hi there!</p>
-    <p>It works!</p>
+    <body>
+		<div>
+    		<h1><a href="/">StudyGuide Genie</a></h1>
+		</div>
+
+		{% for note in notes %}
+    			<div>
+        			<p>published: {{ note.published_date }}</p>
+        			<h1><a href="">{{ note.title }}</a></h1>
+        			<p>{{ note.text|linebreaks }}</p>
+    			</div>
+		{% endfor %}
+    </body>
 </html>
