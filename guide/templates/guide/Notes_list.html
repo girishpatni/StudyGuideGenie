@@ -1,15 +1,14 @@
-<html>
-    <body>
-		<div>
-    		<h1><a href="/">StudyGuide Genie</a></h1>
+{% extends 'guide/base.html' %}
+{% block content %}
+{% for note in notes %}
+	<div class ="note">
+		<div class="date">
+			<p>published: {{ note.published_date }}</p>
 		</div>
+		<h1><a href="{% url 'Notes_detail' pk=note.pk%}">{{ note.title }}</a></h1>
+		<p>{{ note.text|linebreaks }}</p>
+	</div>
+{% endfor %}
+{% endblock %}
 
-		{% for note in notes %}
-    			<div>
-        			<p>published: {{ note.published_date }}</p>
-        			<h1><a href="">{{ note.title }}</a></h1>
-        			<p>{{ note.text|linebreaks }}</p>
-    			</div>
-		{% endfor %}
-    </body>
-</html>
+

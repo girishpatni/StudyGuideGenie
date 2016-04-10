@@ -1,0 +1,14 @@
+{% extends 'guide/base.html' %}
+{% block content %}
+
+	<div class ="note">
+		{% if notes.published_date %}
+		<div class="date">
+			<p>{{ notes.published_date }}</p>
+		</div>
+		{% endif %}
+		<h1>{{ notes.title }}</a></h1>
+		<p>{{ notes.text|linebreaks }}</p>
+	</div>
+
+{% endblock %}
