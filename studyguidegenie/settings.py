@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'guide',
+    'account',
+    'debug_toolbar',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -121,3 +123,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+#Template location
+
+

@@ -1,0 +1,19 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+  </head>
+  <body>
+        {% if user.is_authenticated %}
+        <h1>Hi {{user.username}}</h1>
+        <strong><a href="/account/logout">Logout</a><br /></strong>
+        {% else %}
+        <h1>Hi</h1>
+        <a href="/account/login">Login Here</a><br /></strong>
+        <a href="/account/register/">Register Here</a></strong><br/>
+        {% endif %}
+        </br>        
+    </body>
+</html>
